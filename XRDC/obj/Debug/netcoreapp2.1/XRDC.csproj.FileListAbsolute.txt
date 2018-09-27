@@ -1,0 +1,14 @@
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.csprojAssemblyReference.cache
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.csproj.CoreCompileInputs.cache
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.RazorAssemblyInfo.cache
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.RazorAssemblyInfo.cs
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.AssemblyInfoInputs.cache
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.AssemblyInfo.cs
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\bin\Debug\netcoreapp2.1\XRDC.deps.json
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\bin\Debug\netcoreapp2.1\XRDC.runtimeconfig.json
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\bin\Debug\netcoreapp2.1\XRDC.runtimeconfig.dev.json
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\bin\Debug\netcoreapp2.1\XRDC.dll
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\bin\Debug\netcoreapp2.1\XRDC.pdb
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.RazorTargetAssemblyInfo.cache
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.dll
+C:\Users\Manuel Polus\source\repos\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.pdb
