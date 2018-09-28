@@ -7,10 +7,8 @@ namespace XRDC.DemandManagement.Exceptions
 {
     public class ControllerMustBeSpecializedException : Exception
     {
-
         public ControllerMustBeSpecializedException()
         {
-
         }
 
         public ControllerMustBeSpecializedException(string message) : base(message)

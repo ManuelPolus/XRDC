@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "8d19439ef22c432fe18f0eac697c8789fe30c00a"
+    "signature": "d85eacb5997c7c0c9ef79c0b974988689cadddfc"
   },
   "compilationOptions": {
     "defines": [
@@ -25,7 +25,9 @@
       "XRDC/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "Oracle.ManagedDataAccess": "18.3.0",
+          "Oracle.ManagedDataAccess.Core": "2.18.3"
         },
         "runtime": {
           "XRDC.dll": {}
@@ -205,6 +207,18 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
+      "Oracle.ManagedDataAccess/18.3.0": {
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "4.122.18.3",
+            "fileVersion": "4.122.18.3"
+          }
+        },
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.18.3": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -3204,6 +3218,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess/18.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Eazd+XJJAAvZetbxwXIyZfE/tYpgkmnt0M24/CGvaJujQA0kPsT6yR5ZP4KIGrgh2CjCRdlAGmkM1uCbEwp9w==",
+      "path": "oracle.manageddataaccess/18.3.0",
+      "hashPath": "oracle.manageddataaccess.18.3.0.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess.Core/2.18.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YWpsNnGbLt5CjpfHzt9RUZbp8CPC5AOkeATSY10WICit9TYtkt3cLBP1i7o1b1jHJen6JWwYrxGRG0BTeN9D/Q==",
+      "path": "oracle.manageddataaccess.core/2.18.3",
+      "hashPath": "oracle.manageddataaccess.core.2.18.3.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

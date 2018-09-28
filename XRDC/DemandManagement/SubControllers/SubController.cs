@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using XRDC.DAL;
 using XRDC.DemandManagement.Exceptions;
+using XRDC.Models;
 
 namespace XRDC.DemandManagement.SubControllers
 {
@@ -21,7 +20,9 @@ namespace XRDC.DemandManagement.SubControllers
 
         public virtual string GetError()
         {
+
             throw new ControllerMustBeSpecializedException();
+
         }
 
         string WishedStatus { get; set; }

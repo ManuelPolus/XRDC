@@ -2638,6 +2638,24 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Oracle.ManagedDataAccess/18.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.18.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -6933,6 +6951,42 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Oracle.ManagedDataAccess/18.3.0": {
+      "sha512": "3Eazd+XJJAAvZetbxwXIyZfE/tYpgkmnt0M24/CGvaJujQA0kPsT6yR5ZP4KIGrgh2CjCRdlAGmkM1uCbEwp9w==",
+      "type": "package",
+      "path": "oracle.manageddataaccess/18.3.0",
+      "files": [
+        ".signature.p7s",
+        "bin/x64/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x64/Oracle.ManagedDataAccessIOP.dll",
+        "bin/x86/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x86/Oracle.ManagedDataAccessIOP.dll",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/App.config.uninstall.xdt",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "content/net40/Web.config.uninstall.xdt",
+        "info.txt",
+        "lib/net40/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.18.3.0.nupkg.sha512",
+        "oracle.manageddataaccess.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Oracle.ManagedDataAccess.Core/2.18.3": {
+      "sha512": "YWpsNnGbLt5CjpfHzt9RUZbp8CPC5AOkeATSY10WICit9TYtkt3cLBP1i7o1b1jHJen6JWwYrxGRG0BTeN9D/Q==",
+      "type": "package",
+      "path": "oracle.manageddataaccess.core/2.18.3",
+      "files": [
+        ".signature.p7s",
+        "info.txt",
+        "lib/netstandard2.0/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.core.2.18.3.nupkg.sha512",
+        "oracle.manageddataaccess.core.nuspec",
+        "readme.txt"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -11497,7 +11551,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Oracle.ManagedDataAccess >= 18.3.0",
+      "Oracle.ManagedDataAccess.Core >= 2.18.3"
     ]
   },
   "packageFolders": {
@@ -11507,11 +11563,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manuel Polus\\source\\repos\\XRDC\\XRDC\\XRDC.csproj",
+      "projectUniqueName": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\XRDC\\XRDC.csproj",
       "projectName": "XRDC",
-      "projectPath": "C:\\Users\\Manuel Polus\\source\\repos\\XRDC\\XRDC\\XRDC.csproj",
+      "projectPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\XRDC\\XRDC.csproj",
       "packagesPath": "C:\\Users\\Manuel Polus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manuel Polus\\source\\repos\\XRDC\\XRDC\\obj\\",
+      "outputPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\XRDC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11551,6 +11607,14 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Oracle.ManagedDataAccess": {
+            "target": "Package",
+            "version": "[18.3.0, )"
+          },
+          "Oracle.ManagedDataAccess.Core": {
+            "target": "Package",
+            "version": "[2.18.3, )"
           }
         },
         "imports": [
@@ -11560,5 +11624,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Oracle.ManagedDataAccess 18.3.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }
