@@ -1,0 +1,11 @@
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\bin\Debug\netcoreapp2.1\NetworkManager.deps.json
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\bin\Debug\netcoreapp2.1\NetworkManager.runtimeconfig.json
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\bin\Debug\netcoreapp2.1\NetworkManager.runtimeconfig.dev.json
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\bin\Debug\netcoreapp2.1\NetworkManager.dll
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\bin\Debug\netcoreapp2.1\NetworkManager.pdb
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.csprojAssemblyReference.cache
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.csproj.CoreCompileInputs.cache
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.AssemblyInfoInputs.cache
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.AssemblyInfo.cs
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.dll
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\Lights\obj\Debug\netcoreapp2.1\NetworkManager.pdb

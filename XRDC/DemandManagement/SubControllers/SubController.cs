@@ -20,9 +20,7 @@ namespace XRDC.DemandManagement.SubControllers
 
         public virtual string GetError()
         {
-
             throw new ControllerMustBeSpecializedException();
-
         }
 
         string WishedStatus { get; set; }

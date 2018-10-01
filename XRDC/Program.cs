@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using System.Collections.Generic;
-using XRDC.DAL;
-using XRDC.DemandManagement;
 
 namespace XRDC
 {

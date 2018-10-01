@@ -44,12 +44,12 @@ namespace XRDC.DAL
 
         public List<T> All()
         {
-            return Set ?? throw new Exception(""); 
+            return Set ?? throw new Exception("");
         }
 
         private DataSet<T> Get()
         {
-           using (DbManager dbManager = new DbManager())
+            using (DbManager dbManager = new DbManager())
             {
                 Set = dbManager.Request<List<T>>();
             }

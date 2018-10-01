@@ -26,9 +26,7 @@ namespace XRDC.DemandManagement
         private static Request SplitRequest(string demand)
         {
             Request r = new Request();
-
             r = JsonConvert.DeserializeObject<Request>(demand);
-
             return r;
         }
 

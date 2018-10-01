@@ -8,7 +8,6 @@ namespace XRDC.DAL
 
         private static string ConnectionString { get; set; }
 
-
         public DbManager()
         {
             Open();
