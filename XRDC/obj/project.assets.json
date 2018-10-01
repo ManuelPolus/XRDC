@@ -11562,8 +11562,8 @@
     },
     "NetworkManager/1.0.0": {
       "type": "project",
-      "path": "../Lights/NetworkManager.csproj",
-      "msbuildProject": "../Lights/NetworkManager.csproj"
+      "path": "../NetworkManager/NetworkManager.csproj",
+      "msbuildProject": "../NetworkManager/NetworkManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11605,8 +11605,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\Lights\\NetworkManager.csproj": {
-              "projectPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\Lights\\NetworkManager.csproj"
+            "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\NetworkManager\\NetworkManager.csproj": {
+              "projectPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\NetworkManager\\NetworkManager.csproj"
             }
           }
         }

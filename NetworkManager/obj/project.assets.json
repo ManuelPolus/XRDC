@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\Lights\\NetworkManager.csproj",
+      "projectUniqueName": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\NetworkManager\\NetworkManager.csproj",
       "projectName": "NetworkManager",
-      "projectPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\Lights\\NetworkManager.csproj",
+      "projectPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\NetworkManager\\NetworkManager.csproj",
       "packagesPath": "C:\\Users\\Manuel Polus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\Lights\\obj\\",
+      "outputPath": "C:\\Users\\Manuel Polus\\Documents\\reposForGit\\XRDC\\NetworkManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
