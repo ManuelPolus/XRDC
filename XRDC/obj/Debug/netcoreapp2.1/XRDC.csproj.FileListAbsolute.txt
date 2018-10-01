@@ -28,3 +28,6 @@ C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\obj\Debug\netcoreapp2.1\XR
 C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.pdb
 C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.Properties.Resources.resources
 C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.csproj.GenerateResource.cache
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\bin\Debug\netcoreapp2.1\NetworkManager.dll
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\bin\Debug\netcoreapp2.1\NetworkManager.pdb
+C:\Users\Manuel Polus\Documents\reposForGit\XRDC\XRDC\obj\Debug\netcoreapp2.1\XRDC.csproj.CopyComplete

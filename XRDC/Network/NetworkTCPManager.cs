@@ -23,13 +23,7 @@ namespace XRDC.Network
                 else
                     throw new EmptyRequestException("you must initialize the request before sending it");
             }
-
         }
-
-
-
-
-
 
     }
 }

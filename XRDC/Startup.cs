@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using XRDC.DAL;
+using XRDC.Models;
 
 namespace XRDC
 {
     public class Startup
     {
+
+        private IServiceCollection services = new ServiceCollection();
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,10 +22,18 @@ namespace XRDC
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices()
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            ConfigureGenericServices<dynamic>();
         }
+
+        public void ConfigureGenericServices<T>() where T :class
+        {
+            services.AddDbContext<DataContext<T>>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+        }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

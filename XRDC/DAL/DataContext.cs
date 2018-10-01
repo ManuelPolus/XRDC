@@ -1,30 +1,20 @@
-﻿using System;
-using XRDC.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace XRDC.DAL
 {
-    public class DataContext : IDisposable
-    { 
+    public class DataContext<T> : DbContext where T : class
+    {
+        public DataContext(DbContextOptions<DataContext<T>> options) : base(options)
+        {
+
+        }
+
         public DataContext()
         {
-            InitializeDataSets();        
-        }
-
-        //Declaration of data sets
-
-        public DataSet<Model> Models { get; set; }
-
-        //Here you initialize your DataSets
-        private void InitializeDataSets()
-        {
-            Models = new DataSet<Model>();
 
         }
 
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
+        public DbSet<T> Data { get; set; }
 
 
     }

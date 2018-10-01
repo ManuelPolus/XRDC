@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using XRDC.DAL;
+using XRDC.Models;
 
 namespace XRDC
 {
@@ -7,6 +9,8 @@ namespace XRDC
     {
         public static void Main(string[] args)
         {
+            DataMapper<Model> mapper = new DataMapper<Model>();
+            mapper.GetAll();
             CreateWebHostBuilder(args).Build().Run();
         }
 
