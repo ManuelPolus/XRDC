@@ -1,18 +1,14 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using XRDC.DAL;
-using XRDC.Models;
 
 namespace XRDC
 {
     public class Startup
     {
-
-        private IServiceCollection services = new ServiceCollection();
 
         public Startup(IConfiguration configuration)
         {
@@ -22,15 +18,9 @@ namespace XRDC
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices()
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            ConfigureGenericServices<dynamic>();
-        }
-
-        public void ConfigureGenericServices<T>() where T :class
-        {
-            services.AddDbContext<DataContext<T>>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
 
@@ -48,7 +38,32 @@ namespace XRDC
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc
+            (
+                routes =>
+                {
+                    routes.MapRoute
+                    (
+                        "resources",
+                        "/api/resources",
+                        new { controller = "Resources", action = "Get" }
+                    );
+                    routes.MapRoute
+                    (
+                        "request",
+                        "/api/request/{request}",
+                        new { controller = "Resources", action = "Post", request = "{request}" }
+                    );
+                    routes.MapRoute
+                    (
+                        name: "default",
+                        template: "{controller=Resources}/{action=Get}"
+                    );
+                }
+            );
+
+
         }
     }
 }

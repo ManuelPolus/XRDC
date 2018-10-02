@@ -22,6 +22,7 @@ namespace NetworkManager.Network
 
         public TCPClient(string ip,int port)
         {
+            _client = new TcpClient();
             Connect(ip, port);
         }
 

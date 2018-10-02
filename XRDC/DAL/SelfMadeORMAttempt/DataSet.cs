@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -49,9 +49,9 @@ namespace XRDC.DAL
 
         private DataSet<T> Get()
         {
-            using (DbManager dbManager = new DbManager())
+            using (PgSqlManager pgsqlManager = new PgSqlManager())
             {
-               // Set = dbManager.SelectAll<List<T>>();
+                // Set = dbManager.SelectAll<List<T>>();
             }
             return this;
         }

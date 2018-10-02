@@ -16,7 +16,7 @@ namespace XRDC.Network
 
         public void SendRequest(string ip, int port)
         {
-            using (TCPClient client = new TCPClient(ip, port))
+            using (this._client = new TCPClient(ip, port))
             {
                 if (ManagerRequest != null)
                     _client.SendContent(ManagerRequest.ToString());
