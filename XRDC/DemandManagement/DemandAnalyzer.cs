@@ -11,15 +11,20 @@ namespace XRDC.DemandManagement
         public static bool AnalyzeAndExecute(string demand)
         {
             Request request = SplitRequest(demand);
-          
+
             Type type = Type.GetType("XRDC.DemandManagement.SubControllers." + request.ControllerType);
             string status = request.Status;
-            string options = request.Options.ToString();
+            string options = "";
+            if (request.Options != null)
+            {
+                 options = request.Options.ToString();
+            }
+
 
             object specializedcontroller = Activator.CreateInstance(type);
             SubController controller = (SubController)SubController.Build(specializedcontroller);
 
-            return controller.ExecuteRequest(status,options);
+            return controller.ExecuteRequest(status, options);
         }
 
         private static Request SplitRequest(string demand)
@@ -30,10 +35,10 @@ namespace XRDC.DemandManagement
                 r = JsonUtility.Deserialize<Request>(demand);
                 return r;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw ErrorLaucher.Launch(e);
-            }            
+            }
         }
 
     }

@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using XRDC.DemandManagement;
 using XRDC.Models;
 using XRDC.Models.Resources;
@@ -18,6 +18,7 @@ namespace XRDC.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            //TODO delete fake resources 
             List<Resource> result = new List<Resource>();
 
             result.Add(new Light {Id=1,Name="lampe du salon",OnOff=false });
@@ -45,7 +46,8 @@ namespace XRDC.Controllers
         [HttpPost]
         [Route("/api/resources/{request}")]
         public IActionResult Post(string request)
-        {     
+        {
+            Request.HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
             try
             {
                 if(request == ""|| request == null)

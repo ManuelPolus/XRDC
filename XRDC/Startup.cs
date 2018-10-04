@@ -21,7 +21,11 @@ namespace XRDC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("http://localhost").AllowAnyHeader().AllowAnyMethod());
+            });
         }
 
 
@@ -38,7 +42,8 @@ namespace XRDC
                 app.UseHsts();
             }
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost", "http://3fb9e643.ngrok.io/").AllowAnyHeader());
+            app.UseCors("AllowSpecificOrigin");
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
