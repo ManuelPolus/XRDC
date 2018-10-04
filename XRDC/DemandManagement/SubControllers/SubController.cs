@@ -1,7 +1,6 @@
 ﻿using System;
-using XRDC.DAL;
 using XRDC.DemandManagement.Exceptions;
-using XRDC.Models;
+using XRDC.Utilities;
 
 namespace XRDC.DemandManagement.SubControllers
 {
@@ -15,12 +14,12 @@ namespace XRDC.DemandManagement.SubControllers
 
         public virtual bool ExecuteRequest(string status, string options)
         {
-            throw new ControllerMustBeSpecializedException("You must only execut request from specialized controllers instances");
+           throw ErrorLaucher.Launch(new ControllerMustBeSpecializedException("You must only execut request from specialized controllers instances")); 
         }
 
         public virtual string GetError()
         {
-            throw new ControllerMustBeSpecializedException();
+            throw ErrorLaucher.Launch(new ControllerMustBeSpecializedException("You must only execut request from specialized controllers instances"));
         }
 
         string WishedStatus { get; set; }

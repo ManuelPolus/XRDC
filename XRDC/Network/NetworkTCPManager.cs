@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using XRDC.Models;
 using XRDC.Network.Exceptions;
+using XRDC.Utilities;
 
 namespace XRDC.Network
 
@@ -16,12 +17,12 @@ namespace XRDC.Network
 
         public void SendRequest(string ip, int port)
         {
-            using (this._client = new TCPClient(ip, port))
+            using (_client = new TCPClient(ip, port))
             {
                 if (ManagerRequest != null)
                     _client.SendContent(ManagerRequest.ToString());
                 else
-                    throw new EmptyRequestException("you must initialize the request before sending it");
+                    throw ErrorLaucher.Launch(new EmptyRequestException("you must initialize the request before sending it"));
             }
         }
 

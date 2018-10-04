@@ -9,12 +9,16 @@ namespace XRDC.Utilities
     /// </summary>
     public static class ErrorLaucher
     {
-
-        public static void Launch(Exception ex, bool shouldBeThrown)
+        /// <exceptions></exceptions>
+        public static Exception Launch(Exception ex)
         {
             Debug.WriteLine(ex.StackTrace);
-            if (shouldBeThrown)
-                throw ex;
+            return ex;
+        }
+
+        public static void Display(Exception ex)
+        {
+            Debug.WriteLine(ex.StackTrace);
         }
 
 

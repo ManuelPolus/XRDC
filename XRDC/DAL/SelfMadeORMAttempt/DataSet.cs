@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using XRDC.Utilities;
 
 namespace XRDC.DAL
 {
@@ -19,15 +20,16 @@ namespace XRDC.DAL
 
         public T Find(T searchedObject)
         {
+
             try
             {
                 return Set.FirstOrDefault<T>(t => t.Equals(searchedObject));
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.StackTrace);
+               throw ErrorLaucher.Launch(new Exception("you really fucked up..."));
             }
-            throw new Exception("you really fucked up...");
+            
         }
 
         public void Add(T objectToAdd)
@@ -38,7 +40,7 @@ namespace XRDC.DAL
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.StackTrace);
+                throw ErrorLaucher.Launch(e);
             }
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using XRDC.Utilities;
 
 namespace XRDC.DAL.SelfMadeORMAttempt
 {
@@ -17,14 +18,28 @@ namespace XRDC.DAL.SelfMadeORMAttempt
 
         private new void OpenConnection()
         {
-           // _connection = new OracleConnection(connectionString);
-           //_connection.Open();
+            try
+            {
+                //_connection = new NpgsqlConnection(connectionString);
+                //_connection.Open();
+            }
+            catch (Exception e)
+            {
+                throw ErrorLaucher.Launch(e);
+            }
         }
 
         private new void CloseConnection()
         {
-            //_connection.Dispose();
-            //_connection.Close();
+            try
+            {
+                //_connection.Dispose();
+                //_connection.Close();
+            }
+            catch (Exception e)
+            {
+                throw ErrorLaucher.Launch(e);
+            }
         }
 
         public override void Dispose()

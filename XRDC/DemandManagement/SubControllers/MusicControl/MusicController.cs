@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using XRDC.Network;
 using XRDC.Network.Exceptions;
+using XRDC.Utilities;
 
 namespace XRDC.DemandManagement.SubControllers
 {
@@ -20,13 +20,13 @@ namespace XRDC.DemandManagement.SubControllers
             }
             catch (EmptyRequestException e)
             {
-                Debug.WriteLine(e.StackTrace);
+                ErrorLaucher.Display(e);
                 return false;
             }
             catch (Exception e)
             {
 
-                Debug.WriteLine(e.StackTrace);
+                ErrorLaucher.Display(e);
                 return false;
             }
         }

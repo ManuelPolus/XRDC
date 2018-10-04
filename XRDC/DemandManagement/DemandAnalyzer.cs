@@ -1,8 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using XRDC.DemandManagement.SubControllers;
 using XRDC.Models;
+using XRDC.Utilities;
 
 namespace XRDC.DemandManagement
 {
@@ -33,7 +32,7 @@ namespace XRDC.DemandManagement
             }
             catch(Exception e)
             {
-                throw new JsonSerializationException();
+                throw ErrorLaucher.Launch(e);
             }            
         }
 

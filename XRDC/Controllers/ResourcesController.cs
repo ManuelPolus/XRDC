@@ -6,6 +6,7 @@ using System.Diagnostics;
 using XRDC.DemandManagement;
 using XRDC.Models;
 using XRDC.Models.Resources;
+using XRDC.Utilities;
 
 namespace XRDC.Controllers
 {
@@ -36,17 +37,15 @@ namespace XRDC.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.StackTrace);
+                ErrorLaucher.Display(e);
                 return StatusCode(500, "Internal Error");
             }
-
         }
 
         [HttpPost]
         [Route("/api/resources/{request}")]
         public IActionResult Post(string request)
-        {
-            
+        {     
             try
             {
                 if(request == ""|| request == null)
@@ -55,15 +54,16 @@ namespace XRDC.Controllers
                 return DemandAnalyzer.AnalyzeAndExecute(request) ? StatusCode(200,"Request made") : StatusCode(500, "Network Error");  
             }
             catch (JsonSerializationException jsonex)
-            {   
-                Debug.WriteLine(jsonex.StackTrace);
+            {
+                ErrorLaucher.Display(jsonex);
                 return StatusCode(500, "Internal Error. Request format is not valid");
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.StackTrace);
+                ErrorLaucher.Display(e);
                 return StatusCode(500, "Internal Error");
             }
         }
+
     }
 }
