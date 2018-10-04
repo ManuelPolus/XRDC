@@ -12,13 +12,12 @@ namespace XRDC.DAL
 
         //Declaration of data sets
 
-        public DataSet<Model> Models { get; set; }
+        public DataSet<Resource> Models { get; set; }
 
         //Here you initialize your DataSets
         private void InitializeDataSets()
         {
-            Models = new DataSet<Model>();
-
+            Models = new DataSet<Resource>();
         }
 
         public void Dispose()

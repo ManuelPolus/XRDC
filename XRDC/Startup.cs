@@ -21,6 +21,7 @@ namespace XRDC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors();
         }
 
 
@@ -36,6 +37,8 @@ namespace XRDC
             {
                 app.UseHsts();
             }
+
+            app.UseCors(builder => builder.WithOrigins("http://localhost", "http://3fb9e643.ngrok.io/").AllowAnyHeader());
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -62,6 +65,7 @@ namespace XRDC
                     );
                 }
             );
+
 
 
         }

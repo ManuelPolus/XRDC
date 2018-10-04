@@ -15,7 +15,7 @@ namespace XRDC.DemandManagement
           
             Type type = Type.GetType("XRDC.DemandManagement.SubControllers." + request.ControllerType);
             string status = request.Status;
-            string options = request.Options;
+            string options = request.Options.ToString();
 
             object specializedcontroller = Activator.CreateInstance(type);
             SubController controller = (SubController)SubController.Build(specializedcontroller);
@@ -28,7 +28,7 @@ namespace XRDC.DemandManagement
             try
             {
                 Request r = new Request();
-                r = JsonConvert.DeserializeObject<Request>(demand);
+                r = JsonUtility.Deserialize<Request>(demand);
                 return r;
             }
             catch(Exception e)
